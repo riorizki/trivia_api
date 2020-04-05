@@ -65,6 +65,14 @@ Once you have your virtual environment setup and running, install dependencies b
 pip install -r requirements.txt
 ```
 
+## Database Setup
+
+With Postgres running, restore a database using the trivia.psql file provided. From the backend folder in terminal run:
+
+```bash
+psql trivia < trivia.psql
+```
+
 ## Running the Frontend in Dev Mode
 
 The frontend app was built using create-react-app. In order to run the app in development mode use `npm start`. You can change the script in the `package.json` file.
@@ -92,13 +100,13 @@ flask run
 To run the tests, run
 
 ```
-dropdb trivia
-createdb trivia
-psql trivia < trivia.psql
+dropdb trivia_test
+createdb trivia_test
+psql trivia_test < trivia.psql
 python test_flaskr.py
 ```
 
-Omit the dropdb command the first time you run tests.
+NOTE: Make sure you create a database named trivia_test in the PostgreSQL server before running the tests.
 
 ## API Reference
 
